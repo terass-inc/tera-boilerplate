@@ -12,6 +12,8 @@ jobs:
         id: cache_node_modules
         with:
           path: node_modules
-          key: node_modules-${{ hashFiles('package.json', 'yarn.lock') }}
+          key: node_modules-${{ hashFiles('**/package.json', 'yarn.lock') }}
       - run: yarn install --frozen-lockfile
         if: steps.cache_node_modules.outputs.cache-hit != 'true'
+      - run: yarn eslint .
+      - run: yarn prettier --check .

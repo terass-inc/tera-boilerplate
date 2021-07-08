@@ -1,0 +1,6 @@
+brew "direnv"
+brew "node"
+brew "node@12"
+brew "node@14"
+brew "yarn"
+brew "imagemagick"

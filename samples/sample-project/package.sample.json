@@ -1,0 +1,16 @@
+{
+  "name": "@terass-inc/tera-sample",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "14"
+  },
+  "scripts": {
+    "lint": "eslint --cache --fix . && prettier --write --loglevel warn ."
+  },
+  "workspaces": [],
+  "devDependencies": {
+    "@terass-inc/eslint-config": "link:../tera-boilerplate/eslint-config",
+    "@terass-inc/tera-boilerplate": "link:../tera-boilerplate"
+  }
+}
